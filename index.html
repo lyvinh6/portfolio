@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio cá nhân của Lý Thế Vinh - sinh viên CNTT, định hướng Backend Developer.">
+    <title>Lý Thế Vinh | Portfolio</title>
+
+    <!-- CSS dùng để thiết kế giao diện -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. THANH MENU -->
+    <header class="header">
+        <div class="container menu">
+            <a class="logo" href="#home">&lt;/&gt; portfolio<span>.</span></a>
+
+            <nav>
+                <a href="#about">Giới thiệu</a>
+                <a href="#skills">Kỹ năng</a>
+                <a href="#projects">Dự án</a>
+                <a href="#journey">Hành trình</a>
+                <a href="#contact">Liên hệ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. GIỚI THIỆU ĐẦU TRANG -->
+        <section id="home" class="container hero">
+            <div>
+                <span class="small-label">HELLO WORLD / XIN CHÀO 👋</span>
+
+                <h1>Mình là <span>Lý Thế Vinh.</span></h1>
+                <h3>Backend Developer · Sinh viên CNTT</h3>
+
+                <p class="muted">
+                    Mình yêu thích xây dựng các ứng dụng web, phát triển API
+                    và biến những ý tưởng công nghệ thành sản phẩm hữu ích.
+                </p>
+
+                <div class="hero-buttons">
+                    <a class="button primary" href="#projects">Khám phá dự án ↗</a>
+                    <a class="button secondary" href="#contact">Liên hệ với mình</a>
+                </div>
+
+                <p class="tech-line">✦ Python &nbsp; ✦ FastAPI &nbsp; ✦ Web Development</p>
+            </div>
+
+            <!-- Khung code chỉ để trang trí, không chạy Python -->
+            <div class="code-card">
+                <div class="code-top">🔴 🟡 🟢 &nbsp; main.py</div>
+                <pre><code><span class="purple">from</span> fastapi <span class="purple">import</span> FastAPI
+
+app = FastAPI()
+
+<span class="yellow">@app.get</span>(<span class="green">"/hello"</span>)
+<span class="purple">def</span> hello():
+    <span class="purple">return</span> {
+        <span class="green">"name"</span>: <span class="green">"Lý Thế Vinh"</span>,
+        <span class="green">"passion"</span>: <span class="green">"coding"</span>
+    }
+
+<span class="comment"># Keep learning. Keep building.</span></code></pre>
+                <div class="code-bottom">● Ready to build &nbsp; · &nbsp; Python</div>
+            </div>
+        </section>
+
+        <!-- 3. GIỚI THIỆU BẢN THÂN -->
+        <section id="about" class="section">
+            <div class="container">
+                <p class="small-label">01 / ABOUT ME</p>
+                <h2>Một chút về <span>mình.</span></h2>
+                <p class="muted">Đôi nét về con người và định hướng của mình.</p>
+
+                <div class="about-grid">
+                    <div class="avatar-card">&lt;/&gt;<small>BUILD · LEARN · REPEAT</small></div>
+
+                    <div class="about-text">
+                        <h3>Không chỉ viết code, mình còn thích giải quyết vấn đề.</h3>
+                        <p class="muted">
+                            Mình là sinh viên yêu thích công nghệ phần mềm, đặc biệt
+                            là lập trình Backend và xây dựng các dịch vụ web.
+                            Mình rèn luyện kỹ năng qua các bài tập và dự án nhóm.
+                        </p>
+                        <p class="muted">
+                            Mình quan tâm đến thiết kế API rõ ràng, làm việc nhóm
+                            hiệu quả và học những công nghệ mới.
+                        </p>
+                        <div class="facts">
+                            <p><b>Định hướng:</b> Backend Development</p>
+                            <p><b>Địa điểm:</b> TP. Hồ Chí Minh, Việt Nam</p>
+                            <p><b>Học tập:</b> Công nghệ thông tin</p>
+                            <p><b>Sở thích:</b> Lập trình · Công nghệ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. KỸ NĂNG -->
+        <section id="skills" class="section">
+            <div class="container">
+                <p class="small-label">02 / MY SKILLS</p>
+                <h2>Kỹ năng &amp; <span>công nghệ.</span></h2>
+                <p class="muted">Những công nghệ mình đang học và sử dụng.</p>
+
+                <div class="cards four-columns">
+                    <article class="card">
+                        <div class="card-icon">{ }</div>
+                        <h3>Backend</h3>
+                        <p>Python, FastAPI, Flask, REST API</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">⌘</div>
+                        <h3>Frontend</h3>
+                        <p>HTML, CSS, JavaScript, React</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">▤</div>
+                        <h3>Database</h3>
+                        <p>SQL, SQLite, SQL Server</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">⚙</div>
+                        <h3>Công cụ</h3>
+                        <p>Git, GitHub, Docker, VS Code</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CÁC DỰ ÁN -->
+        <section id="projects" class="section">
+            <div class="container">
+                <p class="small-label">03 / MY PROJECTS</p>
+                <h2>Dự án <span>tiêu biểu.</span></h2>
+                <p class="muted">Một số dự án mình đã hoặc đang tham gia.</p>
+
+                <div class="cards three-columns">
+                    <article class="card project">
+                        <div class="project-cover purple-cover">01 / Algo_web</div>
+                        <p class="status">Dự án nhóm · Đang phát triển</p>
+                        <h3>Website học thuật toán</h3>
+                        <p>
+                            Website giải thích và minh họa thuật toán.
+                            Mình phụ trách Backend với FastAPI,
+                            đăng ký, đăng nhập và xác thực JWT.
+                        </p>
+                        <p class="tags">Python · FastAPI · JWT</p>
+                        <a class="project-link" href="https://github.com/KarlDragon/Algo_web" target="_blank" rel="noopener noreferrer">Xem GitHub ↗</a>
+                    </article>
+
+                    <article class="card project">
+                        <div class="project-cover blue-cover">02 / SMD</div>
+                        <p class="status">Dự án học tập</p>
+                        <h3>Quản lý và số hóa giáo trình</h3>
+                        <p>
+                            Dự án học phần về quản lý phiên bản giáo trình,
+                            quy trình phê duyệt và hỗ trợ tra cứu tài liệu.
+                        </p>
+                        <p class="tags">Phân tích hệ thống · UML · Python</p>
+                        <span class="no-link">Chưa cập nhật link dự án</span>
+                    </article>
+
+                    <article class="card project">
+                        <div class="project-cover pink-cover">03 / DBMS</div>
+                        <p class="status">Mã nguồn trên GitHub</p>
+                        <h3>Quản lý sinh viên</h3>
+                        <p>
+                            Kho mã nguồn minh họa bài tập cơ sở dữ liệu
+                            về quản lý sinh viên trên GitHub.
+                        </p>
+                        <p class="tags">Database · SQL</p>
+                        <a class="project-link" href="https://github.com/lyvinh6/DBMS-QuanLySinhVien-Demo" target="_blank" rel="noopener noreferrer">Xem GitHub ↗</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. HÀNH TRÌNH HỌC TẬP -->
+        <section id="journey" class="section">
+            <div class="container">
+                <p class="small-label">04 / MY JOURNEY</p>
+                <h2>Hành trình <span>phát triển.</span></h2>
+                <p class="muted">Từng bước học hỏi thông qua việc thực hành.</p>
+
+                <div class="journey-list">
+                    <div class="journey-item"><b>01</b><p><strong>Nền tảng lập trình</strong><br>Học thuật toán, C/C++ và Python.</p></div>
+                    <div class="journey-item"><b>02</b><p><strong>Phát triển web</strong><br>Tìm hiểu HTML, CSS và cấu trúc website.</p></div>
+                    <div class="journey-item"><b>03</b><p><strong>Backend</strong><br>Thực hành API, FastAPI và làm việc nhóm với Git.</p></div>
+                    <div class="journey-item"><b>04</b><p><strong>Tiếp tục hoàn thiện</strong><br>Rèn luyện thiết kế hệ thống và chất lượng code.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. LIÊN HỆ: BẤM MỞ GMAIL TRÊN TRÌNH DUYỆT -->
+        <section id="contact" class="section">
+            <div class="container contact-box">
+                <p class="small-label">05 / CONTACT</p>
+                <h2>Cùng nhau tạo nên <span>điều thú vị!</span> ✨</h2>
+                <p class="muted">Mình luôn sẵn sàng kết nối và trao đổi về lập trình.</p>
+
+                <p class="email-text"><b>Email:</b> lyvinh4145@gmail.com</p>
+
+                <div class="contact-buttons">
+                    <!-- Gmail trực tiếp, không cần cài ứng dụng email -->
+                    <a class="button primary"
+                       href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=lyvinh4145%40gmail.com"
+                       target="_blank"
+                       rel="noopener noreferrer">Mở Gmail để gửi thư ↗</a>
+
+                    <a class="button secondary"
+                       href="https://github.com/lyvinh6"
+                       target="_blank"
+                       rel="noopener noreferrer">GitHub ↗</a>
+
+                    <a class="button secondary"
+                       href="https://www.facebook.com/share/1Eaa3PByKo/?mibextid=wwXIfr"
+                       target="_blank"
+                       rel="noopener noreferrer">Facebook ↗</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 8. CHÂN TRANG -->
+    <footer>© 2026 Lý Thế Vinh · Portfolio làm bằng HTML &amp; CSS</footer>
+
+</body>
+</html>
