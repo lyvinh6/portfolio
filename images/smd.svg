@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+<title id="title">SMD - Luồng số hóa và duyệt giáo trình</title>
+<desc id="desc">Minh họa biểu đồ quy trình ba bước tạo, duyệt và công bố giáo trình</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b4965"/><stop offset="1" stop-color="#06566b"/></linearGradient></defs>
+<rect width="800" height="450" fill="url(#bg)"/>
+<circle cx="687" cy="81" r="130" fill="#54dbca" opacity=".12"/><circle cx="76" cy="412" r="150" fill="#5AE4E4" opacity=".1"/>
+<text x="55" y="76" font-family="Arial" font-size="32" font-weight="bold" fill="#fff">SMD</text>
+<text x="55" y="108" font-family="Arial" font-size="18" fill="#BBDDFB">Syllabus Management &amp; Digitalization</text>
+<g font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">
+<rect x="56" y="190" width="200" height="132" rx="16" fill="#173D65" stroke="#77CEEF" stroke-width="3"/>
+<rect x="301" y="190" width="200" height="132" rx="16" fill="#173D65" stroke="#77CEEF" stroke-width="3"/>
+<rect x="546" y="190" width="200" height="132" rx="16" fill="#173D65" stroke="#77CEEF" stroke-width="3"/>
+<g fill="#fff"><text x="156" y="240">01 · Soạn</text><text x="401" y="240">02 · Duyệt</text><text x="646" y="240">03 · Công bố</text></g>
+<g fill="#C9E8FF" font-size="15" font-weight="normal"><text x="156" y="273">Giáo trình</text><text x="401" y="273">Nhiều cấp</text><text x="646" y="273">Tra cứu</text></g>
+</g>
+<g fill="none" stroke="#9BFFEF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M270 257h18m-8 -10l8 10-8 10"/><path d="M515 257h18m-8 -10l8 10-8 10"/></g>
+<text x="54" y="403" font-family="Arial" font-size="14" fill="#C9DCF5">Hình minh họa ý tưởng · Không phải ảnh chụp sản phẩm</text>
+</svg>

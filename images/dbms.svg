@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 405">
+  <defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#08485d"/><stop offset="1" stop-color="#09605d"/></linearGradient></defs>
+  <rect width="720" height="405" fill="url(#g)"/>
+  <text x="44" y="66" font-family="Arial" font-size="29" font-weight="bold" fill="#ffffff">DBMS</text>
+  <text x="44" y="100" font-family="Arial" font-size="16" fill="#bdeeff">Quản lý sinh viên • cơ sở dữ liệu</text>
+  <g stroke="#52e0c4" stroke-width="5" fill="none"><path d="M250 194H460M355 194V272"/></g>
+  <g fill="#a7dffd"><rect x="105" y="146" width="180" height="92" rx="12"/><rect x="430" y="146" width="180" height="92" rx="12"/><rect x="268" y="275" width="180" height="76" rx="12"/></g>
+  <g fill="#16324e" font-family="Arial" font-size="19" text-anchor="middle" font-weight="bold"><text x="195" y="200">Sinh viên</text><text x="520" y="200">Lớp học</text><text x="358" y="320">Môn học</text></g>
+  <text x="44" y="391" font-family="Arial" font-size="12" fill="#d5def0">Hình minh họa thiết kế • không phải ảnh chụp dự án</text>
+</svg>

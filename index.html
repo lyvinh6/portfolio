@@ -3,98 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio cá nhân của Lý Thế Vinh - sinh viên CNTT, định hướng Backend Developer.">
-    <title>Lý Thế Vinh | Portfolio</title>
-
-    <!-- CSS dùng để thiết kế giao diện -->
+    <meta name="description" content="Portfolio của Lý Thế Vinh, sinh viên Công nghệ thông tin định hướng Backend Developer.">
+    <title>Lý Thế Vinh | Backend Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- NỀN ĐỘNG: các lớp trang trí không ảnh hưởng nội dung -->
+    <div class="animated-background" aria-hidden="true">
+        <div class="background-grid"></div>
+        <div class="background-stars"></div>
+        <div class="aurora aurora-one"></div>
+        <div class="aurora aurora-two"></div>
+        <div class="light-wave wave-one"></div>
+        <div class="light-wave wave-two"></div>
+    </div>
+    <a class="skip-link" href="#main">Đi đến nội dung chính</a>
 
     <!-- 1. THANH MENU -->
-    <header class="header">
-        <div class="container menu">
-            <a class="logo" href="#home">&lt;/&gt; portfolio<span>.</span></a>
+    <header class="site-header">
+        <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+        <div class="container nav-wrap">
+            <a class="brand" href="#home" aria-label="Về đầu trang">LTV<span>.</span> <small>PORTFOLIO</small></a>
 
-            <nav>
+            <button id="menuButton" class="menu-button" type="button"
+                    aria-label="Mở menu" aria-expanded="false" aria-controls="mainMenu">☰</button>
+
+            <nav id="mainMenu" class="main-menu" aria-label="Điều hướng chính">
                 <a href="#about">Giới thiệu</a>
                 <a href="#skills">Kỹ năng</a>
-                <a href="#projects">Dự án</a>
+                <a href="#education">Học vấn</a>
                 <a href="#journey">Hành trình</a>
+                <a href="#projects">Dự án</a>
                 <a href="#contact">Liên hệ</a>
             </nav>
+
+            <div class="nav-actions">
+                <button id="effectsButton" class="effects-button" type="button"
+                        aria-pressed="false" title="Bật hoặc tắt hiệu ứng chuyển động">✦ Hiệu ứng</button>
+                <button id="themeButton" class="theme-button" type="button"
+                        aria-pressed="false" aria-label="Chuyển sang giao diện sáng">☀️ Sáng</button>
+            </div>
         </div>
     </header>
 
-    <main>
-        <!-- 2. GIỚI THIỆU ĐẦU TRANG -->
-        <section id="home" class="container hero">
-            <div>
-                <span class="small-label">HELLO WORLD / XIN CHÀO 👋</span>
-
-                <h1>Mình là <span>Lý Thế Vinh.</span></h1>
-                <h3>Backend Developer · Sinh viên CNTT</h3>
-
-                <p class="muted">
-                    Mình yêu thích xây dựng các ứng dụng web, phát triển API
-                    và biến những ý tưởng công nghệ thành sản phẩm hữu ích.
+    <main id="main">
+        <!-- 2. GIỚI THIỆU NỔI BẬT + ẢNH CÁ NHÂN -->
+        <section id="home" class="hero container">
+            <div class="hero-orbit" aria-hidden="true"></div>
+            <div class="hero-content">
+                <span class="eyebrow"><span class="online-dot"></span> WELCOME TO MY PORTFOLIO</span>
+                <p class="hello">Xin chào, mình là</p>
+                <h1>Lý Thế <span>Vinh.</span></h1>
+                <h2>Sinh viên CNTT <span class="slash">/</span> Định hướng Backend Developer</h2>
+                <p class="lead">
+                    Mình yêu thích Python, FastAPI và việc xây dựng những hệ thống
+                    hoạt động ổn định, dễ sử dụng. Mình luôn cố gắng học qua dự án
+                    thực tế và cải thiện kỹ năng từng ngày.
                 </p>
-
-                <div class="hero-buttons">
-                    <a class="button primary" href="#projects">Khám phá dự án ↗</a>
-                    <a class="button secondary" href="#contact">Liên hệ với mình</a>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projects">Xem dự án <span aria-hidden="true">↗</span></a>
+                    <a class="btn btn-outline" href="#contact">Liên hệ với mình</a>
                 </div>
-
-                <p class="tech-line">✦ Python &nbsp; ✦ FastAPI &nbsp; ✦ Web Development</p>
+                <div class="hero-facts" aria-label="Điểm nổi bật">
+                    <div><strong>03</strong><span>Dự án học tập</span></div>
+                    <div><strong>Python</strong><span>Ngôn ngữ tập trung</span></div>
+                    <div><strong>FastAPI</strong><span>Công nghệ Backend</span></div>
+                </div>
             </div>
 
-            <!-- Khung code chỉ để trang trí, không chạy Python -->
-            <div class="code-card">
-                <div class="code-top">🔴 🟡 🟢 &nbsp; main.py</div>
-                <pre><code><span class="purple">from</span> fastapi <span class="purple">import</span> FastAPI
-
-app = FastAPI()
-
-<span class="yellow">@app.get</span>(<span class="green">"/hello"</span>)
-<span class="purple">def</span> hello():
-    <span class="purple">return</span> {
-        <span class="green">"name"</span>: <span class="green">"Lý Thế Vinh"</span>,
-        <span class="green">"passion"</span>: <span class="green">"coding"</span>
-    }
-
-<span class="comment"># Keep learning. Keep building.</span></code></pre>
-                <div class="code-bottom">● Ready to build &nbsp; · &nbsp; Python</div>
+            <div class="hero-photo-card">
+                <div class="photo-glow" aria-hidden="true"></div>
+                <!-- Đây là ảnh cá nhân thật của bạn. Đổi ảnh: thay file images/anh-ca-nhan.jpg -->
+                <img class="profile-photo" src="images/anh-ca-nhan.jpg"
+                     alt="Ảnh chân dung Lý Thế Vinh"
+                     width="600" height="750">
+                <div class="photo-label">
+                    <span class="label-kicker">ABOUT ME</span>
+                    <strong>Lý Thế Vinh</strong>
+                    <span>Backend Development • Student</span>
+                </div>
+                <div class="code-bubble" aria-label="Minh họa công nghệ FastAPI">
+                    <span class="code-dot"></span> <code>GET /hello</code> <b>200 OK</b>
+                </div>
             </div>
         </section>
 
-        <!-- 3. GIỚI THIỆU BẢN THÂN -->
-        <section id="about" class="section">
+        <!-- 3. GIỚI THIỆU BẢN THÂN VÀ MỤC TIÊU -->
+        <section id="about" class="section section-alt">
             <div class="container">
-                <p class="small-label">01 / ABOUT ME</p>
-                <h2>Một chút về <span>mình.</span></h2>
-                <p class="muted">Đôi nét về con người và định hướng của mình.</p>
-
+                <div class="section-heading">
+                    <p class="section-number">01 / ABOUT ME</p>
+                    <h2>Không chỉ viết code, <span>mình còn thích giải quyết vấn đề.</span></h2>
+                </div>
                 <div class="about-grid">
-                    <div class="avatar-card">&lt;/&gt;<small>BUILD · LEARN · REPEAT</small></div>
-
-                    <div class="about-text">
-                        <h3>Không chỉ viết code, mình còn thích giải quyết vấn đề.</h3>
-                        <p class="muted">
-                            Mình là sinh viên yêu thích công nghệ phần mềm, đặc biệt
-                            là lập trình Backend và xây dựng các dịch vụ web.
-                            Mình rèn luyện kỹ năng qua các bài tập và dự án nhóm.
+                    <div class="about-story">
+                        <p>
+                            Mình là sinh viên ngành Công nghệ thông tin tại Trường Đại học
+                            Giao thông vận tải Thành phố Hồ Chí Minh (UTH). Mình quan tâm
+                            đến lập trình Backend, cơ sở dữ liệu và cách các ứng dụng web vận hành.
                         </p>
-                        <p class="muted">
-                            Mình quan tâm đến thiết kế API rõ ràng, làm việc nhóm
-                            hiệu quả và học những công nghệ mới.
+                        <p>
+                            Qua những dự án học tập và làm việc nhóm, mình rèn luyện cách
+                            tổ chức mã nguồn, dùng Git/GitHub và xây dựng API bằng FastAPI.
                         </p>
-                        <div class="facts">
-                            <p><b>Định hướng:</b> Backend Development</p>
-                            <p><b>Địa điểm:</b> TP. Hồ Chí Minh, Việt Nam</p>
-                            <p><b>Học tập:</b> Công nghệ thông tin</p>
-                            <p><b>Sở thích:</b> Lập trình · Công nghệ</p>
+                        <div class="details">
+                            <div><span>Chuyên ngành</span><strong>Công nghệ thông tin</strong></div>
+                            <div><span>Định hướng</span><strong>Backend Developer</strong></div>
+                            <div><span>Địa điểm</span><strong>TP. Hồ Chí Minh</strong></div>
                         </div>
                     </div>
+                    <aside class="goal-card">
+                        <span class="goal-icon" aria-hidden="true">◎</span>
+                        <h3>Mục tiêu nghề nghiệp</h3>
+                        <p>
+                            Trở thành Backend Developer có nền tảng vững về Python,
+                            API và cơ sở dữ liệu; xây dựng sản phẩm dễ bảo trì,
+                            có ích cho người dùng và liên tục học hỏi công nghệ mới.
+                        </p>
+                        <div class="goal-tags"><span>Learning</span><span>Building</span><span>Improving</span></div>
+                    </aside>
                 </div>
             </div>
         </section>
@@ -102,134 +130,158 @@ app = FastAPI()
         <!-- 4. KỸ NĂNG -->
         <section id="skills" class="section">
             <div class="container">
-                <p class="small-label">02 / MY SKILLS</p>
-                <h2>Kỹ năng &amp; <span>công nghệ.</span></h2>
-                <p class="muted">Những công nghệ mình đang học và sử dụng.</p>
-
-                <div class="cards four-columns">
-                    <article class="card">
-                        <div class="card-icon">{ }</div>
-                        <h3>Backend</h3>
-                        <p>Python, FastAPI, Flask, REST API</p>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon">⌘</div>
-                        <h3>Frontend</h3>
-                        <p>HTML, CSS, JavaScript, React</p>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon">▤</div>
-                        <h3>Database</h3>
-                        <p>SQL, SQLite, SQL Server</p>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon">⚙</div>
-                        <h3>Công cụ</h3>
-                        <p>Git, GitHub, Docker, VS Code</p>
-                    </article>
+                <div class="section-heading">
+                    <p class="section-number">02 / TECH STACK</p>
+                    <h2>Kỹ năng & <span>công nghệ.</span></h2>
+                    <p>Những công cụ mình đã và đang học qua bài tập, dự án.</p>
+                </div>
+                <div class="skill-grid">
+                    <article class="info-card"><div class="skill-icon">{ }</div><h3>Backend</h3><p>Python, FastAPI, Flask, REST API, JWT</p></article>
+                    <article class="info-card"><div class="skill-icon">&lt;/&gt;</div><h3>Frontend</h3><p>HTML, CSS, JavaScript, React</p></article>
+                    <article class="info-card"><div class="skill-icon">▤</div><h3>Database</h3><p>SQL, SQLite, SQL Server</p></article>
+                    <article class="info-card"><div class="skill-icon">⌘</div><h3>Công cụ</h3><p>Git, GitHub, Docker, VS Code</p></article>
                 </div>
             </div>
         </section>
 
-        <!-- 5. CÁC DỰ ÁN -->
-        <section id="projects" class="section">
+        <!-- 5. HỌC VẤN / KINH NGHIỆM HỌC TẬP -->
+        <section id="education" class="section section-alt">
             <div class="container">
-                <p class="small-label">03 / MY PROJECTS</p>
-                <h2>Dự án <span>tiêu biểu.</span></h2>
-                <p class="muted">Một số dự án mình đã hoặc đang tham gia.</p>
-
-                <div class="cards three-columns">
-                    <article class="card project">
-                        <div class="project-cover purple-cover">01 / Algo_web</div>
-                        <p class="status">Dự án nhóm · Đang phát triển</p>
-                        <h3>Website học thuật toán</h3>
-                        <p>
-                            Website giải thích và minh họa thuật toán.
-                            Mình phụ trách Backend với FastAPI,
-                            đăng ký, đăng nhập và xác thực JWT.
-                        </p>
-                        <p class="tags">Python · FastAPI · JWT</p>
-                        <a class="project-link" href="https://github.com/KarlDragon/Algo_web" target="_blank" rel="noopener noreferrer">Xem GitHub ↗</a>
+                <div class="section-heading">
+                    <p class="section-number">03 / EDUCATION & EXPERIENCE</p>
+                    <h2>Học vấn & <span>hành trình.</span></h2>
+                </div>
+                <div class="timeline-grid">
+                    <article class="timeline-card">
+                        <div class="timeline-tag">HỌC VẤN</div>
+                        <h3>Đại học Giao thông vận tải TP.HCM (UTH)</h3>
+                        <p class="timeline-role">Sinh viên ngành Công nghệ thông tin</p>
+                        <p>Học lập trình, cấu trúc dữ liệu, cơ sở dữ liệu và phân tích thiết kế hệ thống.</p>
                     </article>
-
-                    <article class="card project">
-                        <div class="project-cover blue-cover">02 / SMD</div>
-                        <p class="status">Dự án học tập</p>
-                        <h3>Quản lý và số hóa giáo trình</h3>
-                        <p>
-                            Dự án học phần về quản lý phiên bản giáo trình,
-                            quy trình phê duyệt và hỗ trợ tra cứu tài liệu.
-                        </p>
-                        <p class="tags">Phân tích hệ thống · UML · Python</p>
-                        <a class="project-link" href="https://github.com/KhiemPham1512/CNPM-SMD.git" target="_blank" rel="noopener noreferrer">Xem GitHub ↗</a>
-                    </article>
-
-                    <article class="card project">
-                        <div class="project-cover pink-cover">03 / DBMS</div>
-                        <p class="status">Mã nguồn trên GitHub</p>
-                        <h3>Quản lý sinh viên</h3>
-                        <p>
-                            Kho mã nguồn minh họa bài tập cơ sở dữ liệu
-                            về quản lý sinh viên trên GitHub.
-                        </p>
-                        <p class="tags">Database · SQL</p>
-                        <a class="project-link" href="https://github.com/lyvinh6/DBMS-QuanLySinhVien-Demo" target="_blank" rel="noopener noreferrer">Xem GitHub ↗</a>
+                    <article class="timeline-card">
+                        <div class="timeline-tag">HOẠT ĐỘNG NHÓM</div>
+                        <h3>Phát triển Backend cho Algo_web</h3>
+                        <p class="timeline-role">Python • FastAPI • GitHub</p>
+                        <p>Thực hành xây dựng Register, Login và JWT; làm quen nhánh tính năng, pull request và phối hợp với các thành viên.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- 6. HÀNH TRÌNH HỌC TẬP -->
+        <!-- 6. HÀNH TRÌNH HỌC TẬP: giữ nội dung từ Portfolio gốc -->
         <section id="journey" class="section">
             <div class="container">
-                <p class="small-label">04 / MY JOURNEY</p>
-                <h2>Hành trình <span>phát triển.</span></h2>
-                <p class="muted">Từng bước học hỏi thông qua việc thực hành.</p>
-
-                <div class="journey-list">
-                    <div class="journey-item"><b>01</b><p><strong>Nền tảng lập trình</strong><br>Học thuật toán, C/C++ và Python.</p></div>
-                    <div class="journey-item"><b>02</b><p><strong>Phát triển web</strong><br>Tìm hiểu HTML, CSS và cấu trúc website.</p></div>
-                    <div class="journey-item"><b>03</b><p><strong>Backend</strong><br>Thực hành API, FastAPI và làm việc nhóm với Git.</p></div>
-                    <div class="journey-item"><b>04</b><p><strong>Tiếp tục hoàn thiện</strong><br>Rèn luyện thiết kế hệ thống và chất lượng code.</p></div>
+                <div class="section-heading">
+                    <p class="section-number">04 / MY JOURNEY</p>
+                    <h2>Hành trình <span>phát triển.</span></h2>
+                    <p>Từng bước học hỏi và thực hành trong quá trình học lập trình.</p>
+                </div>
+                <div class="journey-grid">
+                    <article class="journey-step"><span>01</span><h3>Nền tảng lập trình</h3><p>Học thuật toán, C/C++ và Python.</p></article>
+                    <article class="journey-step"><span>02</span><h3>Phát triển web</h3><p>Tìm hiểu HTML, CSS và cấu trúc website.</p></article>
+                    <article class="journey-step"><span>03</span><h3>Backend</h3><p>Thực hành API, FastAPI và làm việc nhóm với Git.</p></article>
+                    <article class="journey-step"><span>04</span><h3>Tiếp tục hoàn thiện</h3><p>Rèn luyện thiết kế hệ thống và chất lượng code.</p></article>
                 </div>
             </div>
         </section>
 
-        <!-- 7. LIÊN HỆ: BẤM MỞ GMAIL TRÊN TRÌNH DUYỆT -->
-        <section id="contact" class="section">
-            <div class="container contact-box">
-                <p class="small-label">05 / CONTACT</p>
-                <h2>Cùng nhau tạo nên <span>điều thú vị!</span> ✨</h2>
-                <p class="muted">Mình luôn sẵn sàng kết nối và trao đổi về lập trình.</p>
-
-                <p class="email-text"><b>Email:</b> lyvinh4145@gmail.com</p>
-
-                <div class="contact-buttons">
-                    <!-- Gmail trực tiếp, không cần cài ứng dụng email -->
-                    <a class="button primary"
-                       href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=lyvinh4145%40gmail.com"
-                       target="_blank"
-                       rel="noopener noreferrer">Mở Gmail để gửi thư ↗</a>
-
-                    <a class="button secondary"
-                       href="https://github.com/lyvinh6"
-                       target="_blank"
-                       rel="noopener noreferrer">GitHub ↗</a>
-
-                    <a class="button secondary"
-                       href="https://www.facebook.com/share/1Eaa3PByKo/?mibextid=wwXIfr"
-                       target="_blank"
-                       rel="noopener noreferrer">Facebook ↗</a>
+        <!-- 7. BA DỰ ÁN: ALGO_WEB / SMD / DBMS -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-number">05 / SELECTED PROJECTS</p>
+                    <h2>Dự án <span>tiêu biểu.</span></h2>
+                    <p>Một số sản phẩm và bài tập đã thực hiện trong quá trình học tập.</p>
                 </div>
+                <!-- JavaScript dùng data-filter để lọc dự án -->
+                <div class="project-filters" role="group" aria-label="Lọc dự án">
+                    <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">Tất cả</button>
+                    <button class="filter-button" type="button" data-filter="backend" aria-pressed="false">Backend</button>
+                    <button class="filter-button" type="button" data-filter="system" aria-pressed="false">Hệ thống</button>
+                    <button class="filter-button" type="button" data-filter="database" aria-pressed="false">Database</button>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card" data-category="backend">
+                        <img src="images/algo-web.svg" alt="Minh họa website học thuật toán Algo_web" loading="lazy">
+                        <div class="project-body">
+                            <span class="project-type">01 • BACKEND / ĐANG PHÁT TRIỂN</span>
+                            <h3>Algo_web</h3>
+                            <p>Website giúp người dùng tìm hiểu và trực quan hóa thuật toán. Mình phụ trách Backend với FastAPI, xây dựng Register, Login và xác thực JWT.</p>
+                            <div class="tech-tags"><span>Python</span><span>FastAPI</span><span>JWT</span></div>
+                            <a href="https://github.com/KarlDragon/Algo_web" target="_blank" rel="noopener noreferrer">Xem trên GitHub <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-category="system">
+                        <img src="images/smd.svg" alt="Minh họa quy trình quản lý và duyệt giáo trình SMD" loading="lazy">
+                        <div class="project-body">
+                            <span class="project-type">02 • PHÂN TÍCH HỆ THỐNG</span>
+                            <h3>SMD – Quản lý giáo trình</h3>
+                            <p>Dự án học phần về quản lý phiên bản giáo trình, quy trình phê duyệt và hỗ trợ tra cứu tài liệu.</p>
+                            <div class="tech-tags"><span>UML</span><span>Phân tích hệ thống</span><span>Python</span></div>
+                            <a href="https://github.com/KhiemPham1512/CNPM-SMD.git" target="_blank" rel="noopener noreferrer">Xem trên GitHub <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                    <article class="project-card" data-category="database">
+                        <img src="images/dbms.svg" alt="Minh họa cơ sở dữ liệu quản lý sinh viên DBMS" loading="lazy">
+                        <div class="project-body">
+                            <span class="project-type">03 • DATABASE</span>
+                            <h3>DBMS – Quản lý sinh viên</h3>
+                            <p>Kho mã nguồn minh họa bài tập cơ sở dữ liệu về quản lý sinh viên, lưu trữ và tra cứu thông tin bằng SQL.</p>
+                            <div class="tech-tags"><span>Database</span><span>SQL</span></div>
+                            <a href="https://github.com/lyvinh6/DBMS-QuanLySinhVien-Demo" target="_blank" rel="noopener noreferrer">Xem trên GitHub <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                </div>
+                <p class="image-note">Hình dự án là minh họa. Bạn có thể thay bằng ảnh chụp màn hình sản phẩm thật trong thư mục images.</p>
+            </div>
+        </section>
+
+        <!-- 8. SỞ THÍCH VÀ CHỨNG CHỈ -->
+        <section class="section section-alt" id="interests">
+            <div class="container interests-grid">
+                <div>
+                    <p class="section-number">06 / BEYOND CODING</p>
+                    <h2>Mình luôn <span>học hỏi.</span></h2>
+                    <p class="section-intro">Mình thích tìm hiểu những cách làm mới, thử nghiệm công nghệ và biến kiến thức trên lớp thành sản phẩm thực tế.</p>
+                </div>
+                <div class="interests-card">
+                    <p><strong>Sở thích:</strong> Lập trình, tìm hiểu công nghệ, phát triển dự án nhóm.</p>
+                    <p><strong>Chứng chỉ / giải thưởng:</strong> Chưa có.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. FORM LIÊN HỆ: CÓ KIỂM TRA BẰNG JAVASCRIPT -->
+        <section id="contact" class="section">
+            <div class="container contact-grid">
+                <div>
+                    <p class="section-number">07 / LET'S CONNECT</p>
+                    <h2>Cùng trao đổi <span>về công nghệ.</span></h2>
+                    <p class="section-intro">Nếu muốn kết nối hoặc trao đổi về một dự án, bạn có thể điền lời nhắn để mở Gmail.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/lyvinh6" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                        <a href="https://www.facebook.com/share/1Eaa3PByKo/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+                        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=lyvinh4145%40gmail.com" target="_blank" rel="noopener noreferrer">Gmail ↗</a>
+                    </div>
+                    <p class="contact-email">lyvinh4145@gmail.com</p>
+                </div>
+                <form id="contactForm" class="contact-form" novalidate>
+                    <h3>Gửi lời nhắn</h3>
+                    <label for="senderName">Họ và tên</label>
+                    <input id="senderName" type="text" autocomplete="name" placeholder="Nhập tên của bạn" required>
+                    <label for="senderEmail">Email</label>
+                    <input id="senderEmail" type="email" autocomplete="email" placeholder="ban@example.com" required>
+                    <label for="senderMessage">Nội dung</label>
+                    <textarea id="senderMessage" rows="4" placeholder="Bạn muốn trao đổi điều gì?" required></textarea>
+                    <p id="formMessage" role="status" aria-live="polite"></p>
+                    <button class="btn btn-primary" type="submit">Mở Gmail để gửi ↗</button>
+                    <a id="gmailFallback" class="fallback-link" href="#contact" target="_blank" rel="noopener noreferrer" hidden>Nếu Gmail chưa mở, bấm vào đây ↗</a>
+                    <p class="form-note">Website không tự gửi email. Bạn sẽ kiểm tra và nhấn Gửi trong Gmail.</p>
+                </form>
             </div>
         </section>
     </main>
 
-    <!-- 8. CHÂN TRANG -->
-    <footer>© 2026 Lý Thế Vinh · Portfolio làm bằng HTML &amp; CSS</footer>
-
+    <footer class="footer"><div class="container footer-inner"><span>© 2026 Lý Thế Vinh</span><span>Designed & coded with HTML, CSS, JavaScript.</span><a href="#home">Trở về đầu trang ↑</a></div></footer>
 </body>
 </html>
